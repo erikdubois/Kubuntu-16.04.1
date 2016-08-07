@@ -115,9 +115,9 @@ This will my place to collect them all.
 https://github.com/erikdubois/Aureola
 
 
-![Screenshots](http://i.imgur.com/vwIB1hs.jpg)
+![Screenshots]()
 
-![Screenshots](http://i.imgur.com/LH6oerv.jpg)
+![Screenshots]()
 
 
 
