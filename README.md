@@ -22,10 +22,6 @@ or
 using Super Ultra Flat Numix Remix icons from https://github.com/erikdubois/Super-Ultra-Flat-Numix-Remix
 
 
-Your result can be
-
-![Screenshots](http://i.imgur.com/s4uuBVS.jpg)
-
 #1 Kernel and nvidia
 
 As described at http://erikdubois.be/ I try to get the latest of everything but on a testpc first mind you! This attitude tends to break things. You have been warned. But the best way to learn about linux.
@@ -81,7 +77,7 @@ Some examples of the kernel test.
 
 # kernel 4.6
 
-![Screenshots](http://i.imgur.com/I7YyucM.jpg)
+![Screenshots]()
 
 
 
@@ -124,72 +120,6 @@ https://github.com/erikdubois/Aureola
 ![Screenshots](http://i.imgur.com/LH6oerv.jpg)
 
 
-
-#4 Aurora Conky
-------------------------
-	
-
-Aurora is a collection of conky's I like. 
-
-Download it from http://sourceforge.net/projects/auroraconkytheme/.
-
-Installation is described at 
-
-http://erikdubois.be/category/linux/aurora-conky/
-
-In the downloadfolder you will find an installationscript as well i.e. Auto_LinuxMint_Rebecca_cinnamon_aurora.sh
-
-
-But basically unpack the zip file. Make the hidden folder .conky (if it does not exist yet) and place the folder aurora in there.
-
-Install conky-manager that will make life easy.
-
-	sudo add-apt-repository -y ppa:teejee2008/ppa
-	sudo apt-get update
-	sudo apt-get install conky-manager
-
-Start up conky-manager and choose the conky to your liking.
-
-
-
-You should arrive at something similar depending on theme and icons choices: 
-
-
-![Screenshots](http://i.imgur.com/pgbXtOr.jpg)
-
-
-
-Then you take the script apart and you write your own code.
-
-This script is explained more in depth on my website.
-
-http://erikdubois.be/
-
-
-
-
-#5 ZSH and Oh-my-sh
------------------------
-I like bash but I prefer zsh with lots of different theme to spice things up. So let us install that in the script
-
-./install-zsh-vx.sh
-
-Normally you need to go and find that hidden file .zshrc (CTRL+H) and edit it. You should change it into ZSH_THEME="random".
-
-<b>Latest script will take care of that automatically.</b>
-
-You can take a look at these youtube movies. They were made on Linux Mint. Since Linux Mint is made upon Ubuntu, you can 
-profit from these movies as well.
-
-[![Install zsh](http://i.imgur.com/vcTLjCT.jpg)](https://www.youtube.com/watch?v=5UOkIRhq7h8 "Install zsh - Click to Watch!")
-
-Each time you start an other terminal you will get a different theme. It will surprise you every time.
-
-<b>Do not forget to type in the terminal that you would like to change the standard shell in zsh :</b>
-
-	- sudo chsh yourusername -s /bin/zsh
-
-[![Showing zsh](http://i.imgur.com/gzK6c7j.jpg)](https://www.youtube.com/watch?v=T2Y_dp1STos "Showing zsh - Click to Watch!")
 
 
 Plank
