@@ -67,35 +67,29 @@
 ##################################################################################################################
 
 
-# if there is already a folder, delete or else do nothing
-
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
+########################################
+########        I C O N S      #########
+########################################
 
 
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
 
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
 
-if ! foobar_loc="$(type -p "curl")" || [ -z "curl" ]; then
+# S A R D I
+# from sourceforge 
 
-	echo "#################################################"
-	echo "installing curl for this script to work"
-	echo "#################################################"
+wget -O /tmp/sardi.tar.gz "https://sourceforge.net/projects/sardi/files/latest/download?source=files"
+mkdir /tmp/sardi
+tar -zxvf /tmp/sardi.tar.gz -C /tmp/sardi
+rm /tmp/sardi.tar.gz
 
-  	sudo apt install curl
-fi
+# if there is no hidden folder conky then make one
+[ -d $HOME"/./icons" ] || mkdir -p $HOME"/.icons"
 
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
+cp -r /tmp/sardi/* ~/.icons/
+rm -rf /tmp/sardi
 
-sudo /tmp/hardcode-fixer/fix.sh
 
-echo
-echo
+
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"
 echo "################################################################"

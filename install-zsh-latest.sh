@@ -65,37 +65,32 @@
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. AT YOUR OWN RISK.
 #
 ##################################################################################################################
+sudo apt-get install zsh git wget -y
+wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 
+# changing the theme to random so you can enjoy tons of themes.
 
-# if there is already a folder, delete or else do nothing
+sudo sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"random\"/g' ~/.zshrc
 
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
+# If above line did not work somehow. This is what you should do to enjoy the many themes.
+# go find the hidden .zshrc file and look for ZSH_THEME="robbyrussell" (CTRL+H to find hidden files)
+# change this to ZSH_THEME="random"
 
-
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
-
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
-
-if ! foobar_loc="$(type -p "curl")" || [ -z "curl" ]; then
-
-	echo "#################################################"
-	echo "installing curl for this script to work"
-	echo "#################################################"
-
-  	sudo apt install curl
-fi
-
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
-
-sudo /tmp/hardcode-fixer/fix.sh
 
 echo
 echo
-echo "################################################################"
-echo "###################    T H E   E N D      ######################"
-echo "################################################################"
+echo
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo "Often you do not get the chance to type your password"
+echo "Retype this line again and fill in your own username"
+echo "sudo chsh username -s /bin/zsh"
+echo "sudo chsh username -s /bin/zsh"
+echo "sudo chsh username -s /bin/zsh"
+echo "sudo chsh username -s /bin/zsh"
+echo "sudo chsh username -s /bin/zsh"
+echo "sudo chsh username -s /bin/zsh"
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo
+echo
+echo "Log off or reboot to see the change in your terminal".
+echo "----------------------------------------------------"

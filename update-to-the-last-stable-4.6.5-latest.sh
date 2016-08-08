@@ -67,35 +67,62 @@
 ##################################################################################################################
 
 
-# if there is already a folder, delete or else do nothing
+#  H I G H L Y    E X P E R I M E N T A L
 
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
+#  Better to read and do a step by step upgrade 
+
+#  http://erikdubois.be/linux/the-ultimate-linux-mint-update
+
+#  if you want to experiment on a computer where there is no data loss risk
+
+#  please be my guest
+
+echo "Let us check if your computer is up-to-date"
 
 
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
+#sudo apt-get update -y
+#sudo apt-get upgrade -y
+#sudo apt-get autoclean -y
+#sudo apt-get autoremove -y
 
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
+#Grub customizer if you dual boot
+#sudo add-apt-repository ppa:danielrichter2007/grub-customizer -y
+#sudo apt-get -y update
+#sudo apt-get install -y grub-customizer
 
-if ! foobar_loc="$(type -p "curl")" || [ -z "curl" ]; then
 
-	echo "#################################################"
-	echo "installing curl for this script to work"
-	echo "#################################################"
+# latest kernel check the following url
+# http://kernel.ubuntu.com/~kernel-ppa/mainline/
+# at the moment you can have kernel 4.4.0
+# depending of you hardware you can install it as wel
+# keep in mind that nvidia or ati drivers sometimes clash with the kernel
+# read the latest article on these matters at http://erikdubois.be
+ 
+wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.6.5/linux-headers-4.6.5-040605-generic_4.6.5-040605.201607271333_amd64.deb
+wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.6.5/linux-headers-4.6.5-040605_4.6.5-040605.201607271333_all.deb
+wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.6.5/linux-image-4.6.5-040605-generic_4.6.5-040605.201607271333_amd64.deb
 
-  	sudo apt install curl
-fi
+sudo dpkg -i linux*
 
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
+rm linux-*
 
-sudo /tmp/hardcode-fixer/fix.sh
+echo "Kernel is installed"
+echo "Download files have been deleted"
 
-echo
-echo
-echo "################################################################"
-echo "###################    T H E   E N D      ######################"
-echo "################################################################"
+#ending
+#mkdir $HOME/Upload
+#sudo apt-get -y update
+#sudo apt-get -f -y install
+#sudo apt-get -y upgrade
+
+#sudo apt-get -y autoremove
+#sudo apt-get -y autoclean
+
+
+
+
+
+
+
+
+

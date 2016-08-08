@@ -67,35 +67,18 @@
 ##################################################################################################################
 
 
-# if there is already a folder, delete or else do nothing
+# repo for screenfetch
+# sudo add-apt-repository ppa:djcj/screenfetch -y
+# in standard repo of ubuntu
 
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
+# getting new info of this new repo
+sudo apt-get -y update
+
+# installing
+sudo apt-get install -y screenfetch
 
 
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
+############################################################################
 
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
+#ending
 
-if ! foobar_loc="$(type -p "curl")" || [ -z "curl" ]; then
-
-	echo "#################################################"
-	echo "installing curl for this script to work"
-	echo "#################################################"
-
-  	sudo apt install curl
-fi
-
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
-
-sudo /tmp/hardcode-fixer/fix.sh
-
-echo
-echo
-echo "################################################################"
-echo "###################    T H E   E N D      ######################"
-echo "################################################################"

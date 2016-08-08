@@ -67,35 +67,16 @@
 ##################################################################################################################
 
 
-# if there is already a folder, delete or else do nothing
+sh conky-aureola-quick-latest.sh
+sh conky-aurora-latest.sh
+sh icons-sardi-latest.sh
+sh icons-super-ultra-flat-numix-latest.sh
+sh icons-yltra-flat-latest.sh
+sh install-all-needed-software-at-once-latest.sh
+sh install-numix-latest.sh
+sh install-zsh-latest.sh
+sh hardcodefixer-latest.sh
+sh theme-arc-dark-install.sh
+sh update-to-the-last-stable-4.6.3-kernel-v2.sh
 
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
 
-
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
-
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
-
-if ! foobar_loc="$(type -p "curl")" || [ -z "curl" ]; then
-
-	echo "#################################################"
-	echo "installing curl for this script to work"
-	echo "#################################################"
-
-  	sudo apt install curl
-fi
-
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
-
-sudo /tmp/hardcode-fixer/fix.sh
-
-echo
-echo
-echo "################################################################"
-echo "###################    T H E   E N D      ######################"
-echo "################################################################"

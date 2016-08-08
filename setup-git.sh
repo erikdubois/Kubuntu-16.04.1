@@ -1,33 +1,29 @@
-#!/bin/bash
+#!/bin/bash 
+##################################################################################################################
 #
 #                                       
-# MMMMMMMMMMMMMMMMMMMMMMMMMmds+.        
-# MMm----::-://////////////oymNMd+`     
-# MMd      /++                -sNMd:    
-# MMNso/`  dMM    `.::-. .-::.` .hMN:   
-# ddddMMh  dMM   :hNMNMNhNMNMNh: `NMm   
-#     NMm  dMM  .NMN/-+MMM+-/NMN` dMM   
-#     NMm  dMM  -MMm  `MMM   dMM. dMM   
-#     NMm  dMM  -MMm  `MMM   dMM. dMM   
-#     NMm  dMM  .mmd  `mmm   yMM. dMM   
-#     NMm  dMM`  ..`   ...   ydm. dMM   
-#     hMM- +MMd/-------...-:sdds  dMM   
-#     -NMm- :hNMNNNmdddddddddy/`  dMM   
-#      -dMNs-``-::::-------.``    dMM   
-#       `/dMNmy+/:-------------:/yMMM  
-#          ./ydNMMMMMMMMMMMMMMMMMMMMM  
-#             \.MMMMMMMMMMMMMMMMMMM    
-#                                      
+#                          ./+o+-       
+#                  yyyyy- -yyyyyy+      
+#               ://+//////-yyyyyyo      
+#           .++ .:/++++++/-.+sss/`      
+#         .:++o:  /++++++++/:--:/-      
+#        o:+o+:++.`..```.-/oo+++++/     
+#       .:+o:+o/.          `+sssoo+/    
+#  .++/+:+oo+o:`             /sssooo.   
+# /+++//+:`oo+o               /::--:.   
+# \+/+o+++`o++o               ++////.   
+#  .++.o+++oo+:`             /dddhhh.   
+#       .+.o+oo:.          `oddhhhh+    
+#        \+.++o+o``-````.:ohdhhhhh+     
+#         `:o+++ `ohhhhhhhhyo++os:      
+#           .o:`.syhhhhhhh/.oo++o`      
+#               /osyyyyyyo++ooo+++/     
+#                   ````` +oo+++o\:    
+#                          `oo++.      
+#                                
 #
 #
 ##################################################################################################################
-#
-# Current project : Ultimate-Linux-Mint-18
-#
-# Source 	: 	https://github.com/erikdubois/Ultimate-Linux-Mint-18
-#
-##################################################################################################################
-# Written to be used on 64 bits computers
 # Author 	: 	Erik Dubois
 # Website 	: 	http://www.erikdubois.be
 ##################################################################################################################

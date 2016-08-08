@@ -67,35 +67,40 @@
 ##################################################################################################################
 
 
+########################################
+########        C O N K Y      #########
+########################################
+
+
+
+
+# C O N K Y   A U R E O L A
+# from github
+
 # if there is already a folder, delete or else do nothing
+[ -d /tmp/aureola ] && rm -rf "/tmp/aureola" || echo ""
 
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
+#checking if git is installed else install it
 
-
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
-
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
-
-if ! foobar_loc="$(type -p "curl")" || [ -z "curl" ]; then
+if ! location="$(type -p "git")" || [ -z "git" ]; then
 
 	echo "#################################################"
-	echo "installing curl for this script to work"
+	echo "installing git for this script to work"
 	echo "#################################################"
 
-  	sudo apt install curl
+  	sudo apt install git -y
 fi
 
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
 
-sudo /tmp/hardcode-fixer/fix.sh
+# download the github in folder /tmp/aureola
+git clone https://github.com/erikdubois/Aureola /tmp/aureola
 
-echo
-echo
+
+sh /tmp/aureola/get-aureola-from-github-to-local-drive.sh
+cd /tmp/aureola/acros/
+sh /tmp/aureola/acros/install-conky.sh
+
+
 echo "################################################################"
 echo "###################    T H E   E N D      ######################"
 echo "################################################################"

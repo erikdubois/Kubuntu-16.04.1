@@ -67,35 +67,25 @@
 ##################################################################################################################
 
 
-# if there is already a folder, delete or else do nothing
 
-echo "The script will install itself in the /tmp/hardcode-fixer folder"
-echo "It will run from there"
-echo "Upon next boot the tmp folder will be empty again"
-echo "#################################################"
+# repo for spotify
+# https://www.spotify.com/be-nl/download/linux/
+
+# 1. Add the Spotify repository signing key to be able to verify downloaded packages
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+
+# 2. Add the Spotify repository
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
+# 3. Update list of available packages
+sudo apt-get update
+
+# 4. Install Spotify
+sudo apt-get install spotify-client
 
 
-[ -d /tmp/hardcode-fixer ] && rm -rf "/tmp/hardcode-fixer" || echo ""
+############################################################################
 
-git clone https://github.com/Foggalong/hardcode-fixer /tmp/hardcode-fixer
+#ending
 
-if ! foobar_loc="$(type -p "curl")" || [ -z "curl" ]; then
 
-	echo "#################################################"
-	echo "installing curl for this script to work"
-	echo "#################################################"
-
-  	sudo apt install curl
-fi
-
-echo "#################################################"
-echo "Checking and changing all hardcoded icons"
-echo "#################################################"
-
-sudo /tmp/hardcode-fixer/fix.sh
-
-echo
-echo
-echo "################################################################"
-echo "###################    T H E   E N D      ######################"
-echo "################################################################"
