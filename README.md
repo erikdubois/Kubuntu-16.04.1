@@ -142,6 +142,14 @@ A tutorial has been written here :
 http://erikdubois.be/install-plank-linux-mint-17-3-set-preferences-add-themes-autostart/
 
 
+Plank (8/2016) does not follow the icon theme of KDE settings.
+
+Change the following file manually or create if you do not have it.
+
+	~/.config/gtk-3.0/settings.ini
+
+Change the gtk-icon-theme-name to sardi...
+
 
 
 ------------------------------------
