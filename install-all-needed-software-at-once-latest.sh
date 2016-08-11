@@ -120,7 +120,7 @@ rm sublime-text_build-3114_amd64.deb
 #software from 'normal' repositories
 echo "software from 'normal' repositories"
 sudo apt install -y clementine curl evolution focuswriter frei0r-plugins gimp git glances gparted
-sudo apt install -y hardinfo inkscape inxi kazam openshot p7zip-full ppa-purge screenruler scrot shutter slurm
+sudo apt install -y hardinfo inkscape inxi kazam openshot p7zip-full radiotray ppa-purge screenruler scrot shutter slurm
 sudo apt install -y vnstat winbind screenfetch plank
 sudo apt install -y browser-plugin-vlc vlc
 
