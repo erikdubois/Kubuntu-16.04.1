@@ -1,0 +1,118 @@
+#!/bin/bash 
+##################################################################################################################
+#
+#                                       
+#                          ./+o+-       
+#                  yyyyy- -yyyyyy+      
+#               ://+//////-yyyyyyo      
+#           .++ .:/++++++/-.+sss/`      
+#         .:++o:  /++++++++/:--:/-      
+#        o:+o+:++.`..```.-/oo+++++/     
+#       .:+o:+o/.          `+sssoo+/    
+#  .++/+:+oo+o:`             /sssooo.   
+# /+++//+:`oo+o               /::--:.   
+# \+/+o+++`o++o               ++////.   
+#  .++.o+++oo+:`             /dddhhh.   
+#       .+.o+oo:.          `oddhhhh+    
+#        \+.++o+o``-````.:ohdhhhhh+     
+#         `:o+++ `ohhhhhhhhyo++os:      
+#           .o:`.syhhhhhhh/.oo++o`      
+#               /osyyyyyyo++ooo+++/     
+#                   ````` +oo+++o\:    
+#                          `oo++.      
+#                                
+#
+#
+##################################################################################################################
+# Author 	: 	Erik Dubois
+# Website 	: 	http://www.erikdubois.be
+##################################################################################################################
+# 
+# More from Erik Dubois
+#
+# Aurora Conky
+# at http://sourceforge.net/projects/auroraconkytheme/
+# Explanation on the use of this theme can be found at 
+# http://erikdubois.be/category/linux/aurora-conky/
+# 
+# Aureola Conky
+# Collections of nice conky's with lua syntax
+# https://github.com/erikdubois/Aureola
+#
+# Sardi icons
+# Many different styles of icons from colourfull, monochrome, white, circle
+# https://sourceforge.net/projects/sardi/
+#
+# Super Ultra Flat Numix Remix
+# Colourfull and playfull icons
+# https://github.com/erikdubois/Super-Ultra-Flat-Numix-Remix
+#
+# Check out the github - many more scripts for automatic installation of Linux Systems.
+#
+#
+#
+#
+#
+##################################################################################################################
+# If the option -y has been added. It will autoinstall all. Omit if you do not want that.
+##################################################################################################################
+#
+#
+#
+#
+##################################################################################################################
+#
+#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. AT YOUR OWN RISK.
+#
+##################################################################################################################
+
+########################################
+########        C O N K Y      #########
+########################################
+
+
+
+# if there is already a folder in tmp, delete or else do nothing
+[ -d /tmp/aureola ] && rm -rf "/tmp/aureola" || echo ""
+# download the github in folder /tmp/aureola
+
+echo "################################################################"
+echo "Checking if git is installed"
+echo "Install git for an easy installation"
+
+
+	# G I T
+
+	# check if git is installed
+	if which git > /dev/null; then
+		echo "git was installed. Proceding..."
+
+		else
+
+		echo "################################################################"
+		echo "installing git for this script to work"
+		echo "################################################################"
+
+	  	sudo apt-get install git -y
+		  	
+	fi
+
+
+
+
+echo "################################################################"
+echo "Downloading the files from github to tmp directory"
+
+
+git clone https://github.com/erikdubois/Aureola /tmp/aureola
+
+sh /tmp/aureola/get-aureola-from-github-to-local-drive.sh
+
+cd ~/.aureola/acros
+sh ~/.aureola/acros/install-conky.sh
+
+rm -rf "/tmp/aureola"
+
+echo "################################################################"
+echo "end installing aureola"
+echo "################################################################"

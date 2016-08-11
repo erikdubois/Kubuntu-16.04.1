@@ -76,15 +76,6 @@ This code can be uncommented.
 
 Check on Nvidia.com which driver you should use.
 
-Some examples of the kernel test.
-
-
-
-# kernel 4.6
-
-![Screenshots]()
-
-
 
 
 #2 Software installation
@@ -120,9 +111,9 @@ This will my place to collect them all.
 https://github.com/erikdubois/Aureola
 
 
-![Screenshots]()
+![Screenshots](http://i.imgur.com/u4Ivz8R.jpg)
 
-![Screenshots]()
+
 
 
 
@@ -154,6 +145,23 @@ Change the following file manually or create if you do not have it.
 	~/.config/gtk-3.0/settings.ini
 
 Change the gtk-icon-theme-name to sardi...
+
+Content of current file is
+
+	[Settings]
+	gtk-font-name=Noto Sans Regular 12
+	gtk-theme-name=Breeze
+	gtk-icon-theme-name=Sardi
+	gtk-fallback-icon-theme=default
+	gtk-toolbar-style=GTK_TOOLBAR_ICONS
+	gtk-menu-images=1
+	gtk-button-images=1
+
+	
+	
+
+
+
 
 
 
